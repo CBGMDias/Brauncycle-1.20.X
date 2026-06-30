@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "brauncycle:item/plastic_bottle"
+  }
+}

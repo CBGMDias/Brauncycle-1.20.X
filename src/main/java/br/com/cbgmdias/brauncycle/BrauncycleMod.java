@@ -1,6 +1,9 @@
 package br.com.cbgmdias.brauncycle;
 
+import br.com.cbgmdias.brauncycle.item.ModCreativeModTabs;
+import br.com.cbgmdias.brauncycle.item.ModItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -26,6 +29,10 @@ public class BrauncycleMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -44,8 +51,13 @@ public class BrauncycleMod
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.PLASTIC_BOTTLE);
+            event.accept(ModItems.METAL_CAN);
+            event.accept(ModItems.GLASS_BOTTLE);
+            event.accept(ModItems.NEWSPAPER);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
