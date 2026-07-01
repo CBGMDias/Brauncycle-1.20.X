@@ -20,7 +20,8 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, BrauncycleMod.MOD_ID);
 
     public static final RegistryObject<Block> CRUSHED_METAL_CAN_BLOCK = registerBlock("crushed_metal_can_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

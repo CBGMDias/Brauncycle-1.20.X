@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "brauncycle:crushed_metal_can_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "brauncycle:blocks/crushed_metal_can_block"
+}
