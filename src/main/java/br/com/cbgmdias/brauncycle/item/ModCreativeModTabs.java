@@ -1,6 +1,7 @@
 package br.com.cbgmdias.brauncycle.item;
 
 import br.com.cbgmdias.brauncycle.BrauncycleMod;
+import br.com.cbgmdias.brauncycle.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,6 +22,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.METAL_CAN.get());
                         pOutput.accept(ModItems.NEWSPAPER.get());
                         pOutput.accept(ModItems.GLASS_BOTTLE.get());
+
+                        pOutput.accept(ModBlocks.CRUSHED_METAL_CAN_BLOCK.get());
                     })
                     .build());
 

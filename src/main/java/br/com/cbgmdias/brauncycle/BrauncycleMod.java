@@ -2,6 +2,7 @@ package br.com.cbgmdias.brauncycle;
 
 import br.com.cbgmdias.brauncycle.item.ModCreativeModTabs;
 import br.com.cbgmdias.brauncycle.item.ModItems;
+import br.com.cbgmdias.brauncycle.block.ModBlocks;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -32,6 +33,7 @@ public class BrauncycleMod
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
