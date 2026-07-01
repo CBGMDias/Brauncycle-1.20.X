@@ -1,6 +1,7 @@
 package br.com.cbgmdias.brauncycle.block;
 
 import br.com.cbgmdias.brauncycle.BrauncycleMod;
+import br.com.cbgmdias.brauncycle.block.custom.RecyclingStationBlock;
 import br.com.cbgmdias.brauncycle.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -22,6 +23,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRUSHED_METAL_CAN_BLOCK = registerBlock("crushed_metal_can_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RECYCLING_STATION = registerBlock("recycling_station",
+            () -> new RecyclingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

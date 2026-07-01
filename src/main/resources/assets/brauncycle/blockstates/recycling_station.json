@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "brauncycle:block/recycle_station"
+    },
+    "facing=south": {
+      "model": "brauncycle:block/recycle_station",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "brauncycle:block/recycle_station",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "brauncycle:block/recycle_station",
+      "y": 270
+    }
+  }
+}

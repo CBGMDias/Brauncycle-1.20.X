@@ -3,7 +3,11 @@ package br.com.cbgmdias.brauncycle;
 import br.com.cbgmdias.brauncycle.item.ModCreativeModTabs;
 import br.com.cbgmdias.brauncycle.item.ModItems;
 import br.com.cbgmdias.brauncycle.block.ModBlocks;
+import br.com.cbgmdias.brauncycle.block.entity.ModBlockEntities;
+import br.com.cbgmdias.brauncycle.screen.ModMenuTypes;
+import br.com.cbgmdias.brauncycle.screen.RecyclingStationScreen;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +38,9 @@ public class BrauncycleMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -79,6 +86,7 @@ public class BrauncycleMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            MenuScreens.register(ModMenuTypes.RECYCLING_STATION_MENU.get(), RecyclingStationScreen::new);
         }
     }
 }

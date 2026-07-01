@@ -28,6 +28,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.CRUMPLED_BALL_OF_PAPER.get());
 
                         pOutput.accept(ModBlocks.CRUSHED_METAL_CAN_BLOCK.get());
+                        pOutput.accept(ModBlocks.RECYCLING_STATION.get());
                     })
                     .build());
 
