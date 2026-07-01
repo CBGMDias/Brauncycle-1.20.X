@@ -59,6 +59,10 @@ public class BrauncycleMod
             event.accept(ModItems.METAL_CAN);
             event.accept(ModItems.GLASS_BOTTLE);
             event.accept(ModItems.NEWSPAPER);
+            event.accept(ModItems.PLASTIC_BAG);
+            event.accept(ModItems.CARDBOARD_SHEET);
+            event.accept(ModItems.ALUMINUM_FOIL_SCRAP);
+            event.accept(ModItems.CRUMPLED_BALL_OF_PAPER);
         }
     }
 

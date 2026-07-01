@@ -19,6 +19,14 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> NEWSPAPER = ITEMS.register("newspaper",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PLASTIC_BAG = ITEMS.register("plastic_bag",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CARDBOARD_SHEET = ITEMS.register("cardboard_sheet",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ALUMINUM_FOIL_SCRAP = ITEMS.register("aluminum_foil_scrap",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRUMPLED_BALL_OF_PAPER = ITEMS.register("crumpled_ball_of_paper",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

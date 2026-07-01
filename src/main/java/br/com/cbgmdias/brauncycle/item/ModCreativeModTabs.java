@@ -22,6 +22,10 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.METAL_CAN.get());
                         pOutput.accept(ModItems.NEWSPAPER.get());
                         pOutput.accept(ModItems.GLASS_BOTTLE.get());
+                        pOutput.accept(ModItems.PLASTIC_BAG.get());
+                        pOutput.accept(ModItems.CARDBOARD_SHEET.get());
+                        pOutput.accept(ModItems.ALUMINUM_FOIL_SCRAP.get());
+                        pOutput.accept(ModItems.CRUMPLED_BALL_OF_PAPER.get());
 
                         pOutput.accept(ModBlocks.CRUSHED_METAL_CAN_BLOCK.get());
                     })

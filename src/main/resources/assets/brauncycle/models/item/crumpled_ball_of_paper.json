@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "brauncycle:item/crumpled_ball_of_paper"
+  }
+}
