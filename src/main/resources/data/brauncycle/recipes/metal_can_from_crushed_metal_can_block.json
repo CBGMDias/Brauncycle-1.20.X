@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "brauncycle:crushed_metal_can_block"
+    }
+  ],
+  "result": {
+    "item": "brauncycle:metal_can",
+    "count": 9
+  }
+}

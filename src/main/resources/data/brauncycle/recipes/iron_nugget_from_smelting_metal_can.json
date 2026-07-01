@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.2,
+  "group": "iron",
+  "ingredient": {
+    "item": "brauncycle:metal_can"
+  },
+  "result": "minecraft:iron_nugget"
+}

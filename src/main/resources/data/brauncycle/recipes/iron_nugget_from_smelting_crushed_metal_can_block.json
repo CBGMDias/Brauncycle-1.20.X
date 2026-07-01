@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.8,
+  "group": "iron",
+  "ingredient": {
+    "item": "brauncycle:crushed_metal_can_block"
+  },
+  "result": {
+    "item": "minecraft:iron_nugget",
+    "count": 9
+  }
+}

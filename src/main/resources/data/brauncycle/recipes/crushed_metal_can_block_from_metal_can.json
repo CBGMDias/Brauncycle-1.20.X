@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "brauncycle:metal_can"
+    }
+  },
+  "result": {
+    "item": "brauncycle:crushed_metal_can_block"
+  }
+}
