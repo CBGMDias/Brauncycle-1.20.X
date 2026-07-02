@@ -27,6 +27,11 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.ALUMINUM_FOIL_SCRAP.get());
                         pOutput.accept(ModItems.CRUMPLED_BALL_OF_PAPER.get());
 
+                        pOutput.accept(ModItems.CARDBOARD_HELMET.get());
+                        pOutput.accept(ModItems.CARDBOARD_CHESTPLATE.get());
+                        pOutput.accept(ModItems.CARDBOARD_LEGGINGS.get());
+                        pOutput.accept(ModItems.CARDBOARD_BOOTS.get());
+
                         pOutput.accept(ModBlocks.CRUSHED_METAL_CAN_BLOCK.get());
                         pOutput.accept(ModBlocks.RECYCLING_STATION.get());
                     })
