@@ -1,6 +1,9 @@
 package br.com.cbgmdias.brauncycle;
 
 import br.com.cbgmdias.brauncycle.item.ModCreativeModTabs;
+import br.com.cbgmdias.brauncycle.entity.ModEntities;
+import br.com.cbgmdias.brauncycle.sound.ModSounds;
+import br.com.cbgmdias.brauncycle.entity.client.DeerRenderer;
 import br.com.cbgmdias.brauncycle.item.ModItems;
 import br.com.cbgmdias.brauncycle.block.ModBlocks;
 import br.com.cbgmdias.brauncycle.block.entity.ModBlockEntities;
@@ -9,6 +12,8 @@ import br.com.cbgmdias.brauncycle.screen.RecyclingStationScreen;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -21,6 +26,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(BrauncycleMod.MOD_ID)
@@ -33,10 +39,13 @@ public class BrauncycleMod
     public BrauncycleMod(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+        GeckoLib.initialize();
 
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
         ModBlocks.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
@@ -83,6 +92,14 @@ public class BrauncycleMod
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
+        @SubscribeEvent
+        public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerEntityRenderer(ModEntities.PURIFIED_DEER.get(), context ->
+                    new DeerRenderer<>(context, new ResourceLocation(MOD_ID, "textures/entity/purified_deer.png")));
+            event.registerEntityRenderer(ModEntities.CORRUPTED_DEER.get(), context ->
+                    new DeerRenderer<>(context, new ResourceLocation(MOD_ID, "textures/entity/corrupted_deer.png")));
+        }
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {

@@ -1,0 +1,49 @@
+{
+  "purified_deer_ambient": {
+    "subtitle": "subtitles.brauncycle.purified_deer_ambient",
+    "sounds": [
+      "brauncycle:entity/purified_deer/ambient_1",
+      "brauncycle:entity/purified_deer/ambient_2"
+    ]
+  },
+  "purified_deer_hurt": {
+    "subtitle": "subtitles.brauncycle.purified_deer_hurt",
+    "sounds": [
+      "brauncycle:entity/purified_deer/hurt_1",
+      "brauncycle:entity/purified_deer/hurt_2"
+    ]
+  },
+  "purified_deer_death": {
+    "subtitle": "subtitles.brauncycle.purified_deer_death",
+    "sounds": [
+      "brauncycle:entity/purified_deer/death_1"
+    ]
+  },
+  "corrupted_deer_ambient": {
+    "subtitle": "subtitles.brauncycle.corrupted_deer_ambient",
+    "sounds": [
+      "brauncycle:entity/corrupted_deer/ambient_1",
+      "brauncycle:entity/corrupted_deer/ambient_2"
+    ]
+  },
+  "corrupted_deer_hurt": {
+    "subtitle": "subtitles.brauncycle.corrupted_deer_hurt",
+    "sounds": [
+      "brauncycle:entity/corrupted_deer/hurt_1",
+      "brauncycle:entity/corrupted_deer/hurt_2"
+    ]
+  },
+  "corrupted_deer_death": {
+    "subtitle": "subtitles.brauncycle.corrupted_deer_death",
+    "sounds": [
+      "brauncycle:entity/corrupted_deer/death_1"
+    ]
+  },
+  "corrupted_deer_attack": {
+    "subtitle": "subtitles.brauncycle.corrupted_deer_attack",
+    "sounds": [
+      "brauncycle:entity/corrupted_deer/attack_1",
+      "brauncycle:entity/corrupted_deer/attack_2"
+    ]
+  }
+}

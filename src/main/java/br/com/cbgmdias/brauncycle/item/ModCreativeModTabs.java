@@ -31,6 +31,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.CARDBOARD_CHESTPLATE.get());
                         pOutput.accept(ModItems.CARDBOARD_LEGGINGS.get());
                         pOutput.accept(ModItems.CARDBOARD_BOOTS.get());
+                        pOutput.accept(ModItems.PURIFIED_DEER_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.CORRUPTED_DEER_SPAWN_EGG.get());
 
                         pOutput.accept(ModBlocks.CRUSHED_METAL_CAN_BLOCK.get());
                         pOutput.accept(ModBlocks.RECYCLING_STATION.get());

@@ -1,6 +1,8 @@
 package br.com.cbgmdias.brauncycle.item;
 
 import br.com.cbgmdias.brauncycle.BrauncycleMod;
+import br.com.cbgmdias.brauncycle.entity.ModEntities;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import br.com.cbgmdias.brauncycle.item.custom.FuelItem;
 import br.com.cbgmdias.brauncycle.item.custom.ModArmorItem;
 import net.minecraft.world.item.ArmorItem;
@@ -39,6 +41,11 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.CARDBOARD, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> CARDBOARD_BOOTS = ITEMS.register("cardboard_boots",
             () -> new ArmorItem(ModArmorMaterials.CARDBOARD, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> PURIFIED_DEER_SPAWN_EGG = ITEMS.register("purified_deer_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.PURIFIED_DEER, 0xD8CEAD, 0x6B9344, new Item.Properties()));
+    public static final RegistryObject<Item> CORRUPTED_DEER_SPAWN_EGG = ITEMS.register("corrupted_deer_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.CORRUPTED_DEER, 0x443C42, 0x82933F, new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
