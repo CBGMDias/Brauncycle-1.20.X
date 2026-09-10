@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "brauncycle:plastic_bottle",
+    "brauncycle:metal_can",
+    "brauncycle:newspaper",
+    "brauncycle:glass_bottle",
+    "brauncycle:plastic_bag",
+    "brauncycle:cardboard_sheet",
+    "brauncycle:aluminum_foil_scrap",
+    "brauncycle:crumpled_ball_of_paper"
+  ]
+}
